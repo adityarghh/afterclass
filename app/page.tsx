@@ -51,7 +51,7 @@ const MESSAGES = [
 ];
 
 /* ─── FLOATING PETALS ANIMATION ─────────────────────────────── */
-const Petal = ({ delay, startX }) => (
+const Petal = ({ delay, startX }: { delay: number; startX: number }) => (
   <motion.div
     style={{ position: "absolute", top: -20, left: `${startX}%`, fontSize: 16, opacity: 0.6, userSelect: "none", pointerEvents: "none" }}
     animate={{ y: ["0vh", "110vh"], x: [0, 30, -20, 10], rotate: [0, 180, 360], opacity: [0, 0.7, 0.4, 0] }}
